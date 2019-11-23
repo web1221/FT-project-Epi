@@ -9,22 +9,26 @@ $(document).ready(function(){
   let doctorSearch = new DoctorSearch
   $('form#doctorForm').submit(function(event){
     event.preventDefault();
-    let doctorNameInput = $('input#doctorName').val();
-    let medicalIssueInput = $('input#medicalIssue').val();
+    let doctorNameInput = $('input#doctorNameInput').val();
+    let medicalIssueInput = $('input#medicalIssueInput').val();
+    console.log(medicalIssueInput);
+    console.log(doctorNameInput);
     (async () => {
       const response = await doctorSearch.getDoctorsByname(doctorNameInput);
+      // console.log(response);
       getElement(response);
     })();
     (async () => {
       const response2 = await doctorSearch.getDoctorByMedicalIssue(medicalIssueInput);
-      getElement2(response2)
+      getElement2(response2);
     })();
 
     function getElement(response){
-      $('.doctorNameOutput').append()
+      $('.doctorNameOutput').append();
     }
     function getElement2(response2) {
-      $('.medicalIssueOutput').append()
+      console.log(response2);
+      $('.medicalIssueOutput').append();
     }
 
 
