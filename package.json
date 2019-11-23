@@ -1,14 +1,13 @@
 {
-  "name": "test-setup",
+  "name": "FT-project6-nov22",
   "version": "1.0.0",
-  "description": "",
   "main": "webpack.config.js",
   "scripts": {
-  "build": "webpack --mode development",
-   "start": "npm run build; webpack-dev-server --open --mode development",
-   "lint": "eslint src/*.js",
-   "test": "jest",
-   "debug": "node --inspect node_modules/.bin/jest --runInBand"
+    "build": "webpack --mode development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js",
+    "test": "jest",
+    "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.3.0",
     "eslint-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
@@ -32,5 +32,14 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web1221/FT-project6-Epi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/web1221/FT-project-Epi/issues"
+  },
+  "homepage": "https://github.com/web1221/FT-project-Epi#readme",
+  "description": ""
 }
