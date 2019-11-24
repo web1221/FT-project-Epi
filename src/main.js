@@ -14,6 +14,7 @@ function getElement(response) {
 }
 function getElement2(response2) {
   console.log(response2);
+  if
   for (let i = 0; i < 10; i++) {
     let j = 0;
     if(response2.data[i].practices[0].within_search_area === false){
