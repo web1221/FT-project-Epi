@@ -7,19 +7,20 @@ import {DoctorIssueSearch} from './doctorByIssue.js';
 
 
 function getElement(response) {
-  if(response.data[0].name === undefined){
-    return "No doctor";
-  } else{
-    for (let i = 0; i < 10; i++) {
-      $('ul#list').append(`<li id=${i}>${response.data[i].name}</li>`);
-    }
+  for (let i = 0; i < 10; i++) {
+    $('ul#list').append(`<li id=${i}>${response.data[i].name}</li>`);
   }
 }
 
+
 function getElement2(response2) {
   console.log(response2);
+
   for (let i = 0; i < 10; i++) {
-    $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[0].visit_address.street} ${response2.data[i].practices[0].visit_address.street2},  ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip}<p></li>`)
+    if(response2.data[i].practices[0].within_search_area === false){
+      continue;
+    }
+     $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[0].visit_address.street}, ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip}<p></li>`)
   }
 }
 

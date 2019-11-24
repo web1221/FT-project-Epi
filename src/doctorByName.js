@@ -7,5 +7,8 @@ export class DoctorNameSearch{
     } catch(error) {
       console.error("There was an error:" + error.message);
     }
+    if(name === undefined){
+      return "No Doctor"
+    }
   }
 }
