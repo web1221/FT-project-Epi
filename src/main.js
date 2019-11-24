@@ -5,7 +5,7 @@ import './styles.css';
 import {DoctorNameSearch} from './doctorByName.js';
 import {DoctorIssueSearch} from './doctorByIssue.js';
 
-// ${response2.data[i].practices[0].visit_address.city}
+
 function getElement(response) {
   console.log(response);
   for (let i = 0; i < 10; i++) {
@@ -15,7 +15,16 @@ function getElement(response) {
 function getElement2(response2) {
   console.log(response2);
   for (let i = 0; i < 10; i++) {
-    $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[0].visit_address.street} ${response2.data[i].practices[0].visit_address.street2},  ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip}<p></li>`)
+    let j = 0;
+    if(response2.data[i].practices[0].within_search_area === false){
+      j++;
+      return $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[1].visit_address.street} ${response2.data[i].practices[1].visit_address.street2},  ${response2.data[i].practices[1].visit_address.city}, ${response2.data[i].practices[1].visit_address.state_long} ${response2.data[i].practices[1].visit_address.zip}<p></li>`)
+    } else{
+      $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[j].visit_address.street} ${response2.data[i].practices[j].visit_address.street2},  ${response2.data[i].practices[j].visit_address.city}, ${response2.data[i].practices[j].visit_address.state_long} ${response2.data[i].practices[j].visit_address.zip}<p></li>`)
+    }
+
+    // $('ul#list').append(`<li id=${i}>${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[0].visit_address.street} ${response2.data[i].practices[0].visit_address.street2},  ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip}<p></li>`)
+
   }
 }
 
