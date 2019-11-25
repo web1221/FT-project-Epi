@@ -28,15 +28,15 @@
 
 
 ## Description
-  _  _
+  _This application was created to demonstrate use of API calls. The application takes a name, or a medical issue and returns Doctors who meet the search criteria. The application returns Name, Address, Phone Number, and if the Doctor is accepting new patients._
 
 ## Setup/Installation Requirements
 
-*
-*
-*
-*
-*
+* Open application
+* Enter either a name or medical issue
+* Click submit
+* Get back information about Doctors that match your search criteria
+* Repeat to get new results 
 
 
 ## Known Bugs

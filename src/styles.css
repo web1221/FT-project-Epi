@@ -2,5 +2,26 @@
   display: none;
 }
 .medicalIssueOption {
-  display: none; 
+  display: none;
+}
+ h1{
+   text-align: center;
+   text-decoration: underline;
+ }
+
+h4 {
+  padding: 10px;
+  text-decoration: underline;
+}
+button {
+  margin: 10px;
+}
+.output{
+  display: none;
+  background-color: #7D84B2;
+  padding: 10px;
+  margin-right: 200px;
+}
+body {
+  background-color: #8FA6CB;
 }

@@ -51,12 +51,14 @@ $(document).ready(function() {
         let doctorNameSearch = new DoctorNameSearch();
         const response = await doctorNameSearch.getDoctorsByname(doctorNameInput);
         getElement(response);
+        $('.output').show();
       })();
     } else if (doctorNameInput === "") {
       (async () => {
         let doctorIssueSearch = new DoctorIssueSearch();
         const response2 = await doctorIssueSearch.getDoctorByMedicalIssue(medicalIssueInput);
         getElement2(response2);
+        $('.output').show();
       })();
     }
   });
