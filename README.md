@@ -7,7 +7,7 @@
 ## Specs
 
 ###### A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
-* __Input: Back __
+* __Input: Back__
 * __Output: List of doctors who can help with a back problems__
 
 ###### A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.
@@ -28,7 +28,7 @@
 
 
 ## Description
-  _This application was created to demonstrate use of API calls. The application takes a name, or a medical issue and returns Doctors who meet the search criteria. The application returns Name, Address, Phone Number, and if the Doctor is accepting new patients._
+  _This application was created to demonstrate the use of API calls. The application takes a name, or a medical issue and returns Doctors who meet the search criteria. The application returns Name, Address, Phone Number, and if the Doctor is accepting new patients._
 
 ## Setup/Installation Requirements
 

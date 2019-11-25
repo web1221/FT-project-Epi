@@ -16,7 +16,7 @@ function getElement(response) {
     }
   } catch (response) {
     if (response instanceof TypeError) {
-      return $('ul#list').append(`<li>All the listings for your search</li>`);
+      return $('ul#list').append(`<li>These are all the listings fitting your search</li>`);
     }
   }
 }
@@ -32,7 +32,7 @@ function getElement2(response2) {
     }
   } catch (response2) {
     if (response2 instanceof TypeError) {
-      return $('ul#list').append(`<li>All the listings for your search</li>`);
+      return $('ul#list').append(`<li>These are all the listings fitting your search</li>`);
     }
   }
 }
