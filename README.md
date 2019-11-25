@@ -7,8 +7,8 @@
 ## Specs
 
 ###### A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
-* __Input: Cold __
-* __Output: List of doctors who can help with a cold__
+* __Input: Back __
+* __Output: List of doctors who can help with a back problems__
 
 ###### A user should be able to enter a name to receive a list of doctors in the Portland area that fit the search query.
 * __Input: Weber__
@@ -36,7 +36,7 @@
 * Enter either a name or medical issue
 * Click submit
 * Get back information about Doctors that match your search criteria
-* Repeat to get new results 
+* Repeat to get new results
 
 
 ## Known Bugs

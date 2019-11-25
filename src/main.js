@@ -23,13 +23,12 @@ function getElement(response) {
 
 
 function getElement2(response2) {
-  console.log(response2);
   try {
     for (let i = 0; i < 10; i++) {
       if (response2.data[i].practices[0].within_search_area === false) {
         continue;
       }
-      $('ul#list').append(`<li> ${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}<p>Address: ${response2.data[i].practices[0].visit_address.street}, ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip} <br>Phone Number: ${response2.data[i].practices[0].phones[0].number} <br>Accepting New Patients: ${response2.data[i].practices[0].accepts_new_patients} </p></li>`);
+      $('ul#list').append(`<li> ${response2.data[i].profile.first_name} ${response2.data[i].profile.last_name}, ${response2.data[i].profile.title}<p>Address: ${response2.data[i].practices[0].visit_address.street}, ${response2.data[i].practices[0].visit_address.city}, ${response2.data[i].practices[0].visit_address.state_long} ${response2.data[i].practices[0].visit_address.zip} <br>Phone Number: ${response2.data[i].practices[0].phones[0].number} <br>Accepting New Patients: ${response2.data[i].practices[0].accepts_new_patients} </p></li>`);
     }
   } catch (response2) {
     if (response2 instanceof TypeError) {
