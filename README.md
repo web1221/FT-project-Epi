@@ -32,11 +32,14 @@
 
 ## Setup/Installation Requirements
 
-* Open application
+* Copy the link in github
+* Open terminal and use __git clone__ to clone down repository
+* Run __npm install__
+* To open application run __npm run start__
 * Enter either a name or medical issue
 * Click submit
 * Get back information about Doctors that match your search criteria
-* Repeat to get new results
+* Enter new search criteria to get new results
 
 
 ## Known Bugs
